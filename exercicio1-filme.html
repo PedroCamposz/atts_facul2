@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1 - Estilo de Filme</title>
+</head>
+<body>
+    <p><a href="index.html">&larr; Voltar para o índice</a></p>
+
+    <script>
+        let opcoes = `Escolha seu estilo de filme favorito:
+1 - Ação
+2 - Comédia
+3 - Drama
+4 - Terror
+5 - Ficção Científica
+6 - Romance`;
+
+        let escolha = prompt(opcoes);
+        let estiloFilme;
+
+        switch (escolha) {
+            case "1": estiloFilme = "Ação"; break;
+            case "2": estiloFilme = "Comédia"; break;
+            case "3": estiloFilme = "Drama"; break;
+            case "4": estiloFilme = "Terror"; break;
+            case "5": estiloFilme = "Ficção Científica"; break;
+            case "6": estiloFilme = "Romance"; break;
+            default: estiloFilme = null;
+        }
+
+        if (estiloFilme) {
+            document.write("Seu estilo de filme favorito é: " + estiloFilme);
+        } else {
+            document.write("Opção inválida! Por favor, escolha um número entre 1 e 6.");
+        }
+    </script>
+
+</body>
+</html>
