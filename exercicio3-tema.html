@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 3 - Áreas da Programação</title>
+</head>
+<body>
+    <p><a href="index.html">&larr; Voltar para o índice</a></p>
+
+    <script>
+        let opcoes = `Escolha uma área da programação que te interessa:
+1 - Desenvolvimento Web
+2 - Desenvolvimento Mobile
+3 - Inteligência Artificial
+4 - Jogos (Game Dev)
+5 - Segurança da Informação`;
+
+        let escolha = prompt(opcoes);
+        let mensagem;
+
+        switch (escolha) {
+            case "1":
+                mensagem = "Você escolheu Desenvolvimento Web! Continue explorando HTML, CSS e JavaScript para criar sites incríveis.";
+                break;
+            case "2":
+                mensagem = "Você escolheu Desenvolvimento Mobile! Vale a pena estudar Kotlin, Swift ou frameworks como React Native.";
+                break;
+            case "3":
+                mensagem = "Você escolheu Inteligência Artificial! Aprofunde-se em Python, dados e algoritmos de aprendizado de máquina.";
+                break;
+            case "4":
+                mensagem = "Você escolheu Jogos! Explore engines como Unity ou Godot para dar vida às suas ideias.";
+                break;
+            case "5":
+                mensagem = "Você escolheu Segurança da Informação! Estude redes, criptografia e ética hacker para proteger sistemas.";
+                break;
+            default:
+                mensagem = null;
+        }
+
+        if (mensagem) {
+            document.write(mensagem + "<br><br>Continue estudando e praticando — cada passo te aproxima de se tornar um especialista nessa área!");
+        } else {
+            document.write("Opção inválida! Por favor, escolha um número entre 1 e 5.");
+        }
+    </script>
+
+</body>
+</html>
