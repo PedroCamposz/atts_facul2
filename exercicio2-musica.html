@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Gênero Musical</title>
+</head>
+<body>
+    <p><a href="index.html">&larr; Voltar para o índice</a></p>
+
+    <script>
+        let opcoes = `Escolha seu gênero musical preferido:
+1 - Rock
+2 - Pop
+3 - Hip Hop
+4 - Eletrônica
+5 - Jazz
+6 - Clássica`;
+
+        let escolha = prompt(opcoes);
+        let generoMusical;
+
+        switch (escolha) {
+            case "1": generoMusical = "Rock"; break;
+            case "2": generoMusical = "Pop"; break;
+            case "3": generoMusical = "Hip Hop"; break;
+            case "4": generoMusical = "Eletrônica"; break;
+            case "5": generoMusical = "Jazz"; break;
+            case "6": generoMusical = "Clássica"; break;
+            default: generoMusical = null;
+        }
+
+        if (generoMusical) {
+            document.write("Seu gênero musical preferido é: " + generoMusical);
+        } else {
+            document.write("Opção inválida! Por favor, escolha um número entre 1 e 6.");
+        }
+    </script>
+
+</body>
+</html>
