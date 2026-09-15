@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4 - Forma de Pagamento</title>
+</head>
+<body>
+    <p><a href="index.html">&larr; Voltar para o índice</a></p>
+
+    <script>
+        // Pede o valor total da compra
+        let valorTotal = parseFloat(prompt("Digite o valor total da compra: R$"));
+
+        // Pede a forma de pagamento
+        let opcoes = `Escolha a forma de pagamento:
+1 - Dinheiro/PIX (10% de desconto)
+2 - Débito (5% de desconto)
+3 - Crédito (sem desconto)`;
+
+        let escolha = prompt(opcoes);
+        let valorFinal;
+        let formaPagamento;
+
+        switch (escolha) {
+            case "1":
+                formaPagamento = "Dinheiro/PIX";
+                valorFinal = valorTotal - (valorTotal * 0.10);
+                break;
+            case "2":
+                formaPagamento = "Débito";
+                valorFinal = valorTotal - (valorTotal * 0.05);
+                break;
+            case "3":
+                formaPagamento = "Crédito";
+                valorFinal = valorTotal;
+                break;
+            default:
+                valorFinal = null;
+        }
+
+        if (valorFinal !== null && !isNaN(valorTotal)) {
+            document.write("Forma de pagamento: " + formaPagamento + "<br>");
+            document.write("Valor final a ser pago: R$ " + valorFinal.toFixed(2));
+        } else if (isNaN(valorTotal)) {
+            document.write("Valor da compra inválido! Digite apenas números.");
+        } else {
+            document.write("Opção de pagamento inválida! Escolha 1, 2 ou 3.");
+        }
+    </script>
+
+</body>
+</html>
